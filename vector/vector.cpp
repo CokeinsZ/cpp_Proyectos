@@ -4,6 +4,8 @@ using namespace std;
 
 //All of the following methods are in-place algorithms alternatives
 
+//Stupdly, I in every function theres a procedure to print out the result. So be sure when you really need to invoke "imprimirVector" function
+
 int removeElement(vector<int>& nums, int val) {
     int i = 0;
 
