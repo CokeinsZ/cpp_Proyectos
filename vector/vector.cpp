@@ -68,15 +68,15 @@ double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
 }
 
 void rotate(vector<int>& nums, int k) {
-    int aux, tamano = nums.size();
+    int n=nums.size();
+    k=k%n;
+    vector<int> res=nums;
 
-
-    for (int i = k; i > 0; i--) {
-        aux = nums[i - 1];
-        nums[i - 1] = nums[tamano - 1];
-        nums[tamano - 1] = aux;
-
+    for(int i=0;i<n;i++) {
+        res[(i+k)%n]=nums[i];
     }
+    
+    nums=res;
 }
 
 void imprimirVector(vector<int> v) {
@@ -89,8 +89,8 @@ void imprimirVector(vector<int> v) {
 
 int main()
 {
-    vector<int> n = { 1,2,3,4 };
-    int espacios = 3;
+    vector<int> n = { -1,-100,3,99 };
+    int espacios = 2;
 
     rotate(n, espacios);
 
